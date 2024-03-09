@@ -7,9 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD50B9B32B9BC326002E4DAC /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9B22B9BC326002E4DAC /* MainViewViewModel.swift */; };
+		DD50B9B52B9BC351002E4DAC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9B42B9BC351002E4DAC /* NetworkManager.swift */; };
+		DD50B9B72B9BC364002E4DAC /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9B62B9BC364002E4DAC /* Quiz.swift */; };
+		DD50B9BA2B9BC45B002E4DAC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DD50B9B92B9BC45B002E4DAC /* Alamofire */; };
+		DD50B9BC2B9BC45B002E4DAC /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DD50B9BB2B9BC45B002E4DAC /* AlamofireDynamic */; };
+		DD50B9BF2B9C7500002E4DAC /* DefaultQuizAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD50B9BE2B9C7500002E4DAC /* DefaultQuizAnswerCell.xib */; };
+		DD50B9C02B9C7500002E4DAC /* DefaultQuizAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9BD2B9C7500002E4DAC /* DefaultQuizAnswerCell.swift */; };
+		DD50B9C72B9C7A2B002E4DAC /* CorrectQuizAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD50B9C62B9C7A2B002E4DAC /* CorrectQuizAnswerCell.xib */; };
+		DD50B9C82B9C7A2B002E4DAC /* CorrectQuizAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9C52B9C7A2B002E4DAC /* CorrectQuizAnswerCell.swift */; };
+		DD50B9CB2B9C7A3A002E4DAC /* WrongQuizAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD50B9CA2B9C7A3A002E4DAC /* WrongQuizAnswerCell.xib */; };
+		DD50B9CC2B9C7A3A002E4DAC /* WrongQuizAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9C92B9C7A3A002E4DAC /* WrongQuizAnswerCell.swift */; };
+		DD50B9D92B9C7E70002E4DAC /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9D82B9C7E70002E4DAC /* QuizViewController.swift */; };
+		DD50B9DB2B9C7E82002E4DAC /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9DA2B9C7E82002E4DAC /* QuizViewModel.swift */; };
+		DD50B9DE2B9CA39F002E4DAC /* QuizType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9DD2B9CA39F002E4DAC /* QuizType.swift */; };
+		DD50B9E02B9CA3E8002E4DAC /* QuizAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9DF2B9CA3E8002E4DAC /* QuizAnswer.swift */; };
+		DD50B9E42B9CA938002E4DAC /* DisplayedAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9E32B9CA938002E4DAC /* DisplayedAnswer.swift */; };
+		DD50B9E62B9CA960002E4DAC /* AnswerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9E52B9CA960002E4DAC /* AnswerState.swift */; };
+		DD50B9EC2B9CB92C002E4DAC /* ResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9EB2B9CB92B002E4DAC /* ResultState.swift */; };
+		DD50B9EE2B9CE10D002E4DAC /* QuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50B9ED2B9CE10D002E4DAC /* QuizResult.swift */; };
 		DDB776F72B9B9E2D0017B42B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB776F62B9B9E2D0017B42B /* AppDelegate.swift */; };
 		DDB776F92B9B9E2D0017B42B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB776F82B9B9E2D0017B42B /* SceneDelegate.swift */; };
-		DDB776FB2B9B9E2D0017B42B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB776FA2B9B9E2D0017B42B /* ViewController.swift */; };
+		DDB776FB2B9B9E2D0017B42B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB776FA2B9B9E2D0017B42B /* MainViewController.swift */; };
 		DDB776FE2B9B9E2D0017B42B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DDB776FD2B9B9E2D0017B42B /* Base */; };
 		DDB777002B9B9E2F0017B42B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB776FF2B9B9E2F0017B42B /* Assets.xcassets */; };
 		DDB777032B9B9E2F0017B42B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DDB777022B9B9E2F0017B42B /* Base */; };
@@ -36,10 +55,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD50B9B22B9BC326002E4DAC /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
+		DD50B9B42B9BC351002E4DAC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DD50B9B62B9BC364002E4DAC /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		DD50B9BD2B9C7500002E4DAC /* DefaultQuizAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultQuizAnswerCell.swift; sourceTree = "<group>"; };
+		DD50B9BE2B9C7500002E4DAC /* DefaultQuizAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultQuizAnswerCell.xib; sourceTree = "<group>"; };
+		DD50B9C52B9C7A2B002E4DAC /* CorrectQuizAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectQuizAnswerCell.swift; sourceTree = "<group>"; };
+		DD50B9C62B9C7A2B002E4DAC /* CorrectQuizAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectQuizAnswerCell.xib; sourceTree = "<group>"; };
+		DD50B9C92B9C7A3A002E4DAC /* WrongQuizAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongQuizAnswerCell.swift; sourceTree = "<group>"; };
+		DD50B9CA2B9C7A3A002E4DAC /* WrongQuizAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongQuizAnswerCell.xib; sourceTree = "<group>"; };
+		DD50B9D82B9C7E70002E4DAC /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		DD50B9DA2B9C7E82002E4DAC /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		DD50B9DD2B9CA39F002E4DAC /* QuizType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizType.swift; sourceTree = "<group>"; };
+		DD50B9DF2B9CA3E8002E4DAC /* QuizAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAnswer.swift; sourceTree = "<group>"; };
+		DD50B9E32B9CA938002E4DAC /* DisplayedAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayedAnswer.swift; sourceTree = "<group>"; };
+		DD50B9E52B9CA960002E4DAC /* AnswerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerState.swift; sourceTree = "<group>"; };
+		DD50B9EB2B9CB92B002E4DAC /* ResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultState.swift; sourceTree = "<group>"; };
+		DD50B9ED2B9CE10D002E4DAC /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
 		DDB776F32B9B9E2D0017B42B /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB776F62B9B9E2D0017B42B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB776F82B9B9E2D0017B42B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDB776FA2B9B9E2D0017B42B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDB776FA2B9B9E2D0017B42B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DDB776FD2B9B9E2D0017B42B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDB776FF2B9B9E2F0017B42B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB777022B9B9E2F0017B42B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD50B9BA2B9BC45B002E4DAC /* Alamofire in Frameworks */,
+				DD50B9BC2B9BC45B002E4DAC /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +114,113 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD50B9CD2B9C7B9F002E4DAC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DD50B9B42B9BC351002E4DAC /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DD50B9CE2B9C7BC1002E4DAC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DD50B9CF2B9C7BD4002E4DAC /* Main */,
+				DD50B9D72B9C7E31002E4DAC /* Quiz */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DD50B9CF2B9C7BD4002E4DAC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DDB776FA2B9B9E2D0017B42B /* MainViewController.swift */,
+				DD50B9B22B9BC326002E4DAC /* MainViewViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DD50B9D12B9C7D95002E4DAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD50B9E72B9CA96D002E4DAC /* API */,
+				DD50B9E82B9CA973002E4DAC /* App */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD50B9D22B9C7DCF002E4DAC /* DefaultQuizAnswer */ = {
+			isa = PBXGroup;
+			children = (
+				DD50B9BD2B9C7500002E4DAC /* DefaultQuizAnswerCell.swift */,
+				DD50B9BE2B9C7500002E4DAC /* DefaultQuizAnswerCell.xib */,
+			);
+			path = DefaultQuizAnswer;
+			sourceTree = "<group>";
+		};
+		DD50B9D42B9C7DEB002E4DAC /* CorrectQuizAnswer */ = {
+			isa = PBXGroup;
+			children = (
+				DD50B9C52B9C7A2B002E4DAC /* CorrectQuizAnswerCell.swift */,
+				DD50B9C62B9C7A2B002E4DAC /* CorrectQuizAnswerCell.xib */,
+			);
+			path = CorrectQuizAnswer;
+			sourceTree = "<group>";
+		};
+		DD50B9D52B9C7DFA002E4DAC /* WrongQuizAnswer */ = {
+			isa = PBXGroup;
+			children = (
+				DD50B9C92B9C7A3A002E4DAC /* WrongQuizAnswerCell.swift */,
+				DD50B9CA2B9C7A3A002E4DAC /* WrongQuizAnswerCell.xib */,
+			);
+			path = WrongQuizAnswer;
+			sourceTree = "<group>";
+		};
+		DD50B9D62B9C7E0B002E4DAC /* QuizAnswerCells */ = {
+			isa = PBXGroup;
+			children = (
+				DD50B9D22B9C7DCF002E4DAC /* DefaultQuizAnswer */,
+				DD50B9D42B9C7DEB002E4DAC /* CorrectQuizAnswer */,
+				DD50B9D52B9C7DFA002E4DAC /* WrongQuizAnswer */,
+			);
+			path = QuizAnswerCells;
+			sourceTree = "<group>";
+		};
+		DD50B9D72B9C7E31002E4DAC /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				DD50B9D82B9C7E70002E4DAC /* QuizViewController.swift */,
+				DD50B9DA2B9C7E82002E4DAC /* QuizViewModel.swift */,
+				DD50B9D62B9C7E0B002E4DAC /* QuizAnswerCells */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		DD50B9DC2B9C7EBD002E4DAC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DDB776FF2B9B9E2F0017B42B /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		DD50B9E72B9CA96D002E4DAC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DD50B9B62B9BC364002E4DAC /* Quiz.swift */,
+				DD50B9DF2B9CA3E8002E4DAC /* QuizAnswer.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DD50B9E82B9CA973002E4DAC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DD50B9E32B9CA938002E4DAC /* DisplayedAnswer.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		DDB776EA2B9B9E2D0017B42B = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +244,19 @@
 		DDB776F52B9B9E2D0017B42B /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
-				DDB776F62B9B9E2D0017B42B /* AppDelegate.swift */,
 				DDB776F82B9B9E2D0017B42B /* SceneDelegate.swift */,
-				DDB776FA2B9B9E2D0017B42B /* ViewController.swift */,
+				DDB776F62B9B9E2D0017B42B /* AppDelegate.swift */,
+				DD50B9D12B9C7D95002E4DAC /* Models */,
+				DD50B9CE2B9C7BC1002E4DAC /* Application */,
+				DD50B9CD2B9C7B9F002E4DAC /* Services */,
 				DDB776FC2B9B9E2D0017B42B /* Main.storyboard */,
-				DDB776FF2B9B9E2F0017B42B /* Assets.xcassets */,
 				DDB777012B9B9E2F0017B42B /* LaunchScreen.storyboard */,
+				DD50B9DC2B9C7EBD002E4DAC /* Assets */,
 				DDB777042B9B9E2F0017B42B /* Info.plist */,
+				DD50B9DD2B9CA39F002E4DAC /* QuizType.swift */,
+				DD50B9E52B9CA960002E4DAC /* AnswerState.swift */,
+				DD50B9EB2B9CB92B002E4DAC /* ResultState.swift */,
+				DD50B9ED2B9CE10D002E4DAC /* QuizResult.swift */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -143,6 +294,10 @@
 			dependencies = (
 			);
 			name = QuizApp;
+			packageProductDependencies = (
+				DD50B9B92B9BC45B002E4DAC /* Alamofire */,
+				DD50B9BB2B9BC45B002E4DAC /* AlamofireDynamic */,
+			);
 			productName = QuizApp;
 			productReference = DDB776F32B9B9E2D0017B42B /* QuizApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +370,9 @@
 				Base,
 			);
 			mainGroup = DDB776EA2B9B9E2D0017B42B;
+			packageReferences = (
+				DD50B9B82B9BC45B002E4DAC /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = DDB776F42B9B9E2D0017B42B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,9 +389,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD50B9BF2B9C7500002E4DAC /* DefaultQuizAnswerCell.xib in Resources */,
 				DDB777002B9B9E2F0017B42B /* Assets.xcassets in Resources */,
+				DD50B9C72B9C7A2B002E4DAC /* CorrectQuizAnswerCell.xib in Resources */,
 				DDB777032B9B9E2F0017B42B /* Base in Resources */,
 				DDB776FE2B9B9E2D0017B42B /* Base in Resources */,
+				DD50B9CB2B9C7A3A002E4DAC /* WrongQuizAnswerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +419,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB776FB2B9B9E2D0017B42B /* ViewController.swift in Sources */,
+				DDB776FB2B9B9E2D0017B42B /* MainViewController.swift in Sources */,
 				DDB776F72B9B9E2D0017B42B /* AppDelegate.swift in Sources */,
+				DD50B9DB2B9C7E82002E4DAC /* QuizViewModel.swift in Sources */,
+				DD50B9E02B9CA3E8002E4DAC /* QuizAnswer.swift in Sources */,
+				DD50B9C02B9C7500002E4DAC /* DefaultQuizAnswerCell.swift in Sources */,
+				DD50B9EC2B9CB92C002E4DAC /* ResultState.swift in Sources */,
+				DD50B9CC2B9C7A3A002E4DAC /* WrongQuizAnswerCell.swift in Sources */,
+				DD50B9B72B9BC364002E4DAC /* Quiz.swift in Sources */,
+				DD50B9C82B9C7A2B002E4DAC /* CorrectQuizAnswerCell.swift in Sources */,
+				DD50B9D92B9C7E70002E4DAC /* QuizViewController.swift in Sources */,
+				DD50B9DE2B9CA39F002E4DAC /* QuizType.swift in Sources */,
+				DD50B9E42B9CA938002E4DAC /* DisplayedAnswer.swift in Sources */,
+				DD50B9EE2B9CE10D002E4DAC /* QuizResult.swift in Sources */,
+				DD50B9B52B9BC351002E4DAC /* NetworkManager.swift in Sources */,
+				DD50B9E62B9CA960002E4DAC /* AnswerState.swift in Sources */,
+				DD50B9B32B9BC326002E4DAC /* MainViewViewModel.swift in Sources */,
 				DDB776F92B9B9E2D0017B42B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,6 +782,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD50B9B82B9BC45B002E4DAC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD50B9B92B9BC45B002E4DAC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD50B9B82B9BC45B002E4DAC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DD50B9BB2B9BC45B002E4DAC /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD50B9B82B9BC45B002E4DAC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DDB776EB2B9B9E2D0017B42B /* Project object */;
 }

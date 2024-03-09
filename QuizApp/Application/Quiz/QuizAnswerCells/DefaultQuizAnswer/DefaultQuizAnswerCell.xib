@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefaultQuizAnswerCell" rowHeight="105" id="KGk-i7-Jjw" customClass="DefaultQuizAnswerCell" customModule="QuizApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="431" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5c-Xs-ij4">
+                        <rect key="frame" x="5" y="5" width="421" height="50.333333333333336"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gPJ-C6-UfC">
+                                <rect key="frame" x="10" y="14.333333333333334" width="25" height="22"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="8jK-VY-qRu"/>
+                                    <constraint firstAttribute="height" constant="25" id="HlM-vR-GCZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fI8-1K-xKH">
+                                <rect key="frame" x="45" y="14.999999999999998" width="371" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="fI8-1K-xKH" firstAttribute="top" relation="lessThanOrEqual" secondItem="y5c-Xs-ij4" secondAttribute="top" constant="15" id="0w9-FD-DVC"/>
+                            <constraint firstItem="gPJ-C6-UfC" firstAttribute="leading" secondItem="y5c-Xs-ij4" secondAttribute="leading" constant="10" id="QaY-xh-BCL"/>
+                            <constraint firstItem="fI8-1K-xKH" firstAttribute="centerY" secondItem="y5c-Xs-ij4" secondAttribute="centerY" id="RnN-wL-vUz"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fI8-1K-xKH" secondAttribute="bottom" constant="15" id="U7r-iL-e9f"/>
+                            <constraint firstItem="gPJ-C6-UfC" firstAttribute="centerY" secondItem="y5c-Xs-ij4" secondAttribute="centerY" id="ebV-ax-ZwH"/>
+                            <constraint firstAttribute="trailing" secondItem="fI8-1K-xKH" secondAttribute="trailing" constant="5" id="u2V-hh-TEb"/>
+                            <constraint firstItem="fI8-1K-xKH" firstAttribute="leading" secondItem="gPJ-C6-UfC" secondAttribute="trailing" constant="10" id="xt3-eh-coT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="y5c-Xs-ij4" secondAttribute="trailing" constant="5" id="QoK-jy-df7"/>
+                    <constraint firstItem="y5c-Xs-ij4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="fbJ-4L-M1I"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="y5c-Xs-ij4" secondAttribute="bottom" priority="750" constant="5" id="rBc-JC-SbA"/>
+                    <constraint firstItem="y5c-Xs-ij4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="u7h-eE-ArI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="answerTextLabel" destination="fI8-1K-xKH" id="6ek-yg-461"/>
+                <outlet property="checkImageView" destination="gPJ-C6-UfC" id="0UU-WN-NxW"/>
+                <outlet property="containerView" destination="y5c-Xs-ij4" id="mTM-av-BYG"/>
+            </connections>
+            <point key="canvasLocation" x="214.50381679389312" y="10.211267605633804"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

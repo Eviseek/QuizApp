@@ -7,11 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
+    @IBOutlet weak var startBtn: UIButton!
+    
+    private var mainViewVM = MainViewViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        mainViewVM.viewDidLoad()
     }
 
 
