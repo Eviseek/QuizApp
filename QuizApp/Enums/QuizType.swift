@@ -8,6 +8,8 @@
 import Foundation
 
 enum QuizType: String, Codable {
+    
     case multipleChoice
     case singleChoice
+    
 }
