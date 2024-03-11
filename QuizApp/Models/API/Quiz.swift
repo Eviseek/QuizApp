@@ -17,7 +17,6 @@ struct Quiz: Codable {
     
 }
 
-
 extension Quiz {
     
     static var TEST_DATA: [Quiz] =

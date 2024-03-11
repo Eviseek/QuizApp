@@ -6,3 +6,25 @@
 //
 
 import Foundation
+
+class FinishViewModel {
+    
+    private var viewController: FinishViewController? = nil
+    
+    init() {}
+    
+    func viewDidLoad(viewController: FinishViewController) {
+        
+        self.viewController = viewController
+        
+    }
+    
+    func returnToStartClicked() {
+        
+        guard let viewController = viewController else { return }
+        
+        viewController.navigationController?.popToRootViewController(animated: true)
+        
+    }
+    
+}

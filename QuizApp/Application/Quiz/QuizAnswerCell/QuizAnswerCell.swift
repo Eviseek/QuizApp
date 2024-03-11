@@ -7,13 +7,14 @@
 
 import UIKit
 
-class DefaultQuizAnswerCell: UITableViewCell {
+class QuizAnswerCell: UITableViewCell {
 
     @IBOutlet weak var checkImageView: UIImageView!
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var answerTextLabel: UILabel!
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var borderView: UIView!
+    
+    @IBOutlet weak var answerTextLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,6 +48,7 @@ class DefaultQuizAnswerCell: UITableViewCell {
     }
     
     private func setUnselectedUI() {
+        
         checkImageView.image = UIImage(systemName: "square")
         checkImageView.tintColor = UIColor(named: "lightGray")
         borderView.backgroundColor = UIColor(named: "lightGray")
@@ -54,6 +56,7 @@ class DefaultQuizAnswerCell: UITableViewCell {
     }
     
     private func setSelectedUI() {
+        
         checkImageView.image = UIImage(systemName: "square.inset.filled")
         checkImageView.tintColor = UIColor(named: "darkGray")
         borderView.backgroundColor = UIColor(named: "lightGray")
@@ -62,17 +65,21 @@ class DefaultQuizAnswerCell: UITableViewCell {
     }
     
     private func setSelectedCorrectUI() {
+        
         checkImageView.image = UIImage(systemName: "checkmark.square.fill")
         checkImageView.tintColor = UIColor(named: "correctAnswerDarkGreen")
         borderView.backgroundColor = UIColor(named: "correctAnswerDarkGreen")
         containerView.backgroundColor = UIColor(named: "correctAnswerLightGreen")
+        
     }
     
     private func setSelectedWrongUI() {
+        
         checkImageView.image = UIImage(systemName: "xmark.square.fill")
         checkImageView.tintColor = UIColor(named: "wrongAnswerDarkRed")
         borderView.backgroundColor = UIColor(named: "wrongAnswerDarkRed")
         containerView.backgroundColor = UIColor(named: "wrongAnswerLightRed")
+        
     }
     
 }

@@ -16,18 +16,29 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchQuizData() {
-        AF.request(url).responseDecodable(of: Quiz.self) { response in
-            debugPrint(response)
+    // func for fetching the quiz data
+    func fetchQuizData(completion: @escaping ([Quiz]?) -> ()) {
+        AF.request(url).responseDecodable(of: [Quiz].self) { response in
+            switch response.result {
+            case .success (let quizData):
+                completion(quizData)
+            case .failure (let error):
+                print("!!! Network Manager: something went wrong when fetching data \(error)")
+                completion(nil)
+            }
         }
     }
     
-    func saveQuizData(_ data: Quiz) {
+    // just an example func on how the data would be saved, it isn't actually used in the app
+    func saveQuizData(_ data: [Quiz], completion: @escaping () -> ()) {
         AF.request(url, method: .put, parameters: data, encoder: JSONParameterEncoder.default).response { response in
-                debugPrint(response)
+            switch response.result {
+            case .success:
+                print("Data successfully saved to Firebase DB.")
+            case .failure(let error):
+                print("!!! Network Manager: Something went wrong when saving the data: \(error)")
+            }
         }
     }
-    
-    
     
 }
