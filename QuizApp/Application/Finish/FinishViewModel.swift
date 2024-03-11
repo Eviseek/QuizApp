@@ -14,17 +14,13 @@ class FinishViewModel {
     init() {}
     
     func viewDidLoad(viewController: FinishViewController) {
-        
         self.viewController = viewController
-        
     }
     
     func returnToStartClicked() {
-        
         guard let viewController = viewController else { return }
         
         viewController.navigationController?.popToRootViewController(animated: true)
-        
     }
     
 }

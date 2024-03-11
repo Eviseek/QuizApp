@@ -75,6 +75,7 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNl-ck-qA2">
                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="44"/>
+                                                        <accessibility key="accessibilityConfiguration" label="startQuizButton"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
@@ -296,6 +297,7 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" name="correctAnswerLightGreen"/>
+                                <accessibility key="accessibilityConfiguration" label="explanationView"/>
                                 <constraints>
                                     <constraint firstItem="Ac1-gJ-kzc" firstAttribute="leading" secondItem="GO1-7F-Wn4" secondAttribute="leading" constant="10" id="FnJ-jO-07I"/>
                                     <constraint firstItem="Ac1-gJ-kzc" firstAttribute="top" secondItem="Y3J-Jx-upS" secondAttribute="bottom" constant="5" id="H7Q-ZZ-DA5"/>
@@ -327,6 +329,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZy-PM-CJE">
                                         <rect key="frame" x="0.0" y="0.0" width="363" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" label="submitAnswersButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="wsb-aQ-QCG"/>
                                         </constraints>

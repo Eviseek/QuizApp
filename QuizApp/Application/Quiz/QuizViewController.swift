@@ -41,23 +41,19 @@ class QuizViewController: UIViewController {
         quizViewModel?.viewDidLoad(viewController: self)
         
         setUpOnViewDidLoad()
-        
     }
     
     private func setUpOnViewDidLoad() {
-        
         submitAnswerContainerView.layer.cornerRadius = 5
         explanationView.removeFromSuperview()
         
         setUpTableView()
         
         setUpNavigationBar()
-        
     }
     
     // setting up the tableView
     private func setUpTableView() {
-        
         let nib = UINib(nibName: "QuizAnswerCell", bundle: nil)
         
         tableView.register(nib, forCellReuseIdentifier: "QuizAnswerCell")
@@ -84,7 +80,6 @@ class QuizViewController: UIViewController {
     }
     
     func showQuizResultsWithExplanation(_ explanation: String) {
-        
         showingResults = true
         attachOrRemoveExplanationView(shouldAttach: showingResults)
         
@@ -92,11 +87,9 @@ class QuizViewController: UIViewController {
         explanationLabel.text = explanation
         
         tableView.reloadData()
-        
     }
     
     private func attachOrRemoveExplanationView(shouldAttach: Bool) {
-    
         switch shouldAttach {
         case true:
             self.view.addSubview(explanationView)
@@ -111,12 +104,10 @@ class QuizViewController: UIViewController {
         case false:
             explanationView.removeFromSuperview()
         }
-        
     }
     
     // this func prepares the view for a new question -> hides results, updates questionLabel, questionOrder and totalQuestionCount
     func loadNewQuestion(question: String, questionOrder: Int, totalQuestionsCount: Int) {
-        
         hideQuizResults()
         
         submitAnswerLabel.text = "Submit"
@@ -125,16 +116,13 @@ class QuizViewController: UIViewController {
         questionLabel.text = question
         currentQuestionOrderLabel.text = questionOrder.description
         totalQuestionsCountLabel.text = totalQuestionsCount.description
-        
     }
     
     private func hideQuizResults() {
-        
         showingResults = false
         attachOrRemoveExplanationView(shouldAttach: showingResults)
         
         tableView.reloadData()
-        
     }
     
     func reloadTableView() {
@@ -148,36 +136,30 @@ class QuizViewController: UIViewController {
     }
     
     func changeSubmitAnswerUI(when state: Bool) {
-        
         switch state {
         case true:
             submitAnswerContainerView.backgroundColor = UIColor(named: "generalDarkBlue")
         case false:
             submitAnswerContainerView.backgroundColor = UIColor(named: "generalDarkBlueDisabled")
         }
-        
     }
     
     func showSomethingWentWrongDialog() {
-        
         let alert = UIAlertController(title: "Error", message: "Something went wrong", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { _ in
             self.navigationController?.popViewController(animated: true)
         }))
         self.present(alert, animated: true, completion: nil)
-        
     }
     
     // MARK: IBActions
 
     @IBAction func submitAnswerOrShowNextQuestion(_ sender: UIButton) {
-        
         if !showingResults {
             quizViewModel?.submitButtonClicked()
         } else {
             quizViewModel?.nextQuestionButtonClicked()
         }
-        
     }
 }
 
@@ -190,7 +172,6 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "QuizAnswerCell", for: indexPath) as? QuizAnswerCell {
             cell.selectionStyle = .none
             
@@ -209,7 +190,6 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
 
             return cell
         }
-        
         return UITableViewCell()
     }
     

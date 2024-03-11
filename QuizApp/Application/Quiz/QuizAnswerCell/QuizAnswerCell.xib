@@ -40,6 +40,7 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" name="backgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" label="quizAnswerLabel"/>
                                 <constraints>
                                     <constraint firstItem="fI8-1K-xKH" firstAttribute="centerY" secondItem="gPJ-C6-UfC" secondAttribute="centerY" id="HSL-vW-pui"/>
                                     <constraint firstAttribute="bottom" secondItem="fI8-1K-xKH" secondAttribute="bottom" constant="15" id="VMw-E3-bos"/>
@@ -51,6 +52,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="lightGray"/>
+                        <accessibility key="accessibilityConfiguration" label="quizAnswerCell"/>
                         <constraints>
                             <constraint firstItem="Efh-XO-dbs" firstAttribute="top" secondItem="y5c-Xs-ij4" secondAttribute="top" constant="2" id="F4F-a4-fyY"/>
                             <constraint firstAttribute="trailing" secondItem="Efh-XO-dbs" secondAttribute="trailing" constant="2" id="aLm-BK-0yK"/>

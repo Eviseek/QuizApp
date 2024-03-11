@@ -20,7 +20,6 @@ class QuizViewModel {
     private weak var viewController: QuizViewController? = nil
     
     init?(quizData: [Quiz]?) {
-        
         guard let quizData = quizData, !quizData.isEmpty else { return nil }
         
         self.quizData = quizData
@@ -28,17 +27,14 @@ class QuizViewModel {
         updateDisplayedAnswers(displayedQuiz)
     }
     
-    func viewDidLoad(viewController: QuizViewController) {
-        
+    func viewDidLoad(viewController: QuizViewController?) {
         self.viewController = viewController
         
         // passes data to viewController -> current quiz question, its order and totalQuestionCount
-        viewController.loadNewQuestion(question: displayedQuiz.question, questionOrder: currentQuestionOrder + 1, totalQuestionsCount: quizData.count)
-        
+        viewController?.loadNewQuestion(question: displayedQuiz.question, questionOrder: currentQuestionOrder + 1, totalQuestionsCount: quizData.count)
     }
     
     private func updateDisplayedAnswers(_ displayedQuiz: Quiz) {
-        
         displayedAnswers.removeAll() //clearing the array before each update
         
         for answer in displayedQuiz.answers {
@@ -46,19 +42,17 @@ class QuizViewModel {
         }
         
         displayedAnswers.shuffle() //randomizing the array
-        
     }
     
     // this func is called when one of the quiz answers is tapped on, and it updates the cell state to either selected or unselected
     func cellTappedAt(_ index: Int) {
-        
         guard let viewController = viewController else { return }
 
         displayedAnswers[index].isSelected.toggle() //changes answer's state to selected and unselected
         
         var shouldBeEnabled = false
         
-        for answer in displayedAnswers { //goes through all displayedAnswer, and if at least one of them is selected, sets shouldBeEnabled to true and enables 'Submit' button
+        for answer in displayedAnswers { //goes through all displayed answers, and if at least one of them is selected, sets shouldBeEnabled to true and enables 'Submit' button
             if answer.isSelected {
                 shouldBeEnabled = true
                 break
@@ -67,28 +61,22 @@ class QuizViewModel {
         
         viewController.changeSubmitButtonState(shouldBeEnabled)
         viewController.reloadTableView()
-        
     }
     
     // is called when submit button is clicked, and then the results are calculated
     func submitButtonClicked() {
-        
         guard let viewController = viewController else { return }
         
         setFinalQuizResult()
         viewController.showQuizResultsWithExplanation(displayedQuiz.explanation)
-        
     }
     
     func nextQuestionButtonClicked() {
-        
         loadNewQuestion()
-        
     }
 
     // loads next (new) question, and if there's no next, it pushes the finish screen
     private func loadNewQuestion() {
-        
         guard let viewController = viewController else { return }
         
         currentQuestionOrder += 1
@@ -102,7 +90,6 @@ class QuizViewModel {
         } else {
              continueToFinishScreen()
          }
-        
     }
     
     // this func goes through every answer and sets its result
@@ -110,7 +97,6 @@ class QuizViewModel {
     // selectedWrong = if answer is wrong and user selected it
     // unselected = all other answers
     private func setFinalQuizResult() {
-        
         for i in 0..<displayedAnswers.count {
         
             if displayedAnswers[i].answer.isCorrect {
@@ -121,17 +107,14 @@ class QuizViewModel {
                 displayedAnswers[i].answerResult = .unselected // all other answers are unselected
             }
         }
-        
     }
     
     private func continueToFinishScreen() {
-        
         guard let viewController = viewController else { return }
         
         if let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "FinishViewController") as? FinishViewController {
             viewController.navigationController?.pushViewController(vc, animated: true)
         }
-        
     }
     
 }

@@ -8,8 +8,6 @@
 import Foundation
 
 struct QuizAnswer: Codable {
-    
     var text: String
     var isCorrect: Bool
-    
 }
