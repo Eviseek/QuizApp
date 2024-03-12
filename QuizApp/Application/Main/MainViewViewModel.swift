@@ -10,7 +10,7 @@ import UIKit
 class MainViewViewModel {
     
     private weak var viewController: MainViewController? = nil
-    private var quizData: [Quiz]? = nil
+    private var quizData: [QuizQuestion]? = nil
     
     init () {}
     

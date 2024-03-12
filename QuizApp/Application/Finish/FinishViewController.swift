@@ -13,13 +13,11 @@ class FinishViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         finishViewModel.viewDidLoad(viewController: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
         self.navigationItem.setHidesBackButton(true, animated: true)
     }
 

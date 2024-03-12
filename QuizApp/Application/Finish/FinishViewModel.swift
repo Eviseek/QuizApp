@@ -19,7 +19,6 @@ class FinishViewModel {
     
     func returnToStartClicked() {
         guard let viewController = viewController else { return }
-        
         viewController.navigationController?.popToRootViewController(animated: true)
     }
     

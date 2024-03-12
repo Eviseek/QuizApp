@@ -5,16 +5,13 @@
 //  Created by Eva Chlpikova on 11.03.2024.
 //
 
-// Naming structure: test_UnitOfWork_StateUnderTest_ExpectedBehaviour
-// Testing Structure: Given, When, Then
-
 import XCTest
 @testable import QuizApp
 
 final class QuizViewModel_Tests: XCTestCase {
     
     var quizViewController: QuizViewController?
-    var quizData = Quiz.TEST_DATA
+    var quizData = QuizQuestion.TEST_DATA
     
     override func setUp() {
         quizViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuizViewController") as? QuizViewController
@@ -26,49 +23,37 @@ final class QuizViewModel_Tests: XCTestCase {
     
     // Checks that viewModel doesn't init when quiz is nil or empty
     func test_QuizViewModel_viewModelInit_shouldNotInitialize() {
-        // Given
-        let quizDataNil: [Quiz]? = nil
-        
-        // When
+        let quizDataNil: [QuizQuestion]? = nil
         var quizViewModel = QuizViewModel(quizData: quizDataNil)
         
-        // Then
         XCTAssertNil(quizViewModel)
         
-        // When
-        let quizDataEmpty: [Quiz]? = [Quiz]()
+        let quizDataEmpty: [QuizQuestion]? = [QuizQuestion]()
         quizViewModel = QuizViewModel(quizData: quizDataEmpty)
         
-        // Then
         XCTAssertNil(quizViewModel)
     }
     
     // Checks that the answer that was clicked on, is selected
     func test_QuizViewModel_cellTappedAt_shouldBeSelected() {
-        // Given
         let quizViewModel = QuizViewModel(quizData: quizData)
         quizViewModel?.viewDidLoad(viewController: quizViewController)
         
-        // When
         let randomPosition = Int.random(in: 0..<quizData.count)
         quizViewModel?.cellTappedAt(randomPosition)
-        
-        // Then
+
         XCTAssertTrue(quizViewModel?.displayedAnswers[randomPosition].isSelected ?? false)
     }
     
     // Checks that answer that was clicked on twice - selected, and then unselected - really ends up unselected
     func test_QuizViewModel_cellTappedAt_shouldNOTBeSelected() {
-        // Given
         let quizViewModel = QuizViewModel(quizData: quizData)
         quizViewModel?.viewDidLoad(viewController: quizViewController)
         
-        // When
         let randomPosition = Int.random(in: 0..<quizData.count)
         quizViewModel?.cellTappedAt(randomPosition) //tap to select
         quizViewModel?.cellTappedAt(randomPosition) //tap to unselect
-        
-        // Then
+
         XCTAssertFalse(quizViewModel?.displayedAnswers[randomPosition].isSelected ?? true)
     }
     
@@ -82,7 +67,7 @@ final class QuizViewModel_Tests: XCTestCase {
             quizViewModel?.submitButtonClicked()
             XCTAssertTrue(quizViewModel?.displayedAnswers[correctAnswerAtPosition].answerResult == .selectedCorrect)
         } else {
-            XCTAssertTrue(false)
+            XCTFail("Couldn't find position of the correct answer.")
         }
     }
     
@@ -99,7 +84,7 @@ final class QuizViewModel_Tests: XCTestCase {
             quizViewModel?.submitButtonClicked()
             XCTAssertTrue(quizViewModel?.displayedAnswers[wrongAnswerAtPosition].answerResult == .selectedWrong)
         } else {
-            XCTAssertTrue(false)
+            XCTFail("Couldn't find position of the wrong answer.")
         }
     }
     
@@ -114,7 +99,7 @@ final class QuizViewModel_Tests: XCTestCase {
             quizViewModel?.submitButtonClicked()
             XCTAssertTrue(quizViewModel?.displayedAnswers[wrongAnswerAtPosition].answerResult == .unselected)
         } else {
-            XCTAssertTrue(false)
+            XCTFail("Couldn't find position of the wrong answer.")
         }
     }
 

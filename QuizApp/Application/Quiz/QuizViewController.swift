@@ -9,24 +9,20 @@ import UIKit
 
 class QuizViewController: UIViewController {
     
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var currentQuestionOrderLabel: UILabel!
+    @IBOutlet weak var totalQuestionsCountLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet var explanationView: UIView!
+    @IBOutlet weak var explanationLabel: UILabel!
+    
     @IBOutlet weak var submitAnswerButton: UIButton!
     @IBOutlet weak var submitAnswerContainerView: UIView!
     @IBOutlet weak var submitAnswerLabel: UILabel!
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var questionLabel: UILabel!
-    
-    @IBOutlet weak var currentQuestionOrderLabel: UILabel!
-    @IBOutlet weak var totalQuestionsCountLabel: UILabel!
-    
-    @IBOutlet var explanationView: UIView!
-    
-    @IBOutlet weak var finalResultImageView: UIImageView!
-    @IBOutlet weak var finalResultLabel: UILabel!
-    
-    @IBOutlet weak var explanationLabel: UILabel!
-    
-    var quizData: [Quiz]? = nil
+    var quizData: [QuizQuestion]? = nil
     
     private lazy var quizViewModel: QuizViewModel? = QuizViewModel(quizData: quizData)
     private var showingResults = false
@@ -39,7 +35,6 @@ class QuizViewController: UIViewController {
         }
         
         quizViewModel?.viewDidLoad(viewController: self)
-        
         setUpOnViewDidLoad()
     }
     
@@ -48,30 +43,29 @@ class QuizViewController: UIViewController {
         explanationView.removeFromSuperview()
         
         setUpTableView()
-        
         setUpNavigationBar()
     }
     
     // setting up the tableView
     private func setUpTableView() {
-        let nib = UINib(nibName: "QuizAnswerCell", bundle: nil)
+        tableView.separatorStyle = .none
         
+        let nib = UINib(nibName: "QuizAnswerCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "QuizAnswerCell")
         tableView.dataSource = self
         tableView.delegate = self
-        
-        tableView.separatorStyle = .none
     }
     
     // setting up back button as hidden, and creating a close button
     private func setUpNavigationBar() {
-        
+        self.navigationItem.backBarButtonItem?.accessibilityIdentifier = "backButton"
         self.navigationItem.setHidesBackButton(true, animated: true)
         
         let button = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(dismissView(sender:)))
         button.tintColor = UIColor(named: "generalDarkBlue")
-        
         navigationItem.rightBarButtonItem = button
+        
+        button.accessibilityIdentifier = "cancelButton"
     }
     
     // this func is for the UIBarButton action
@@ -161,6 +155,7 @@ class QuizViewController: UIViewController {
             quizViewModel?.nextQuestionButtonClicked()
         }
     }
+    
 }
 
 // MARK: TableView functionality
@@ -177,17 +172,17 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
             
             let displayedAnswer = quizViewModel?.displayedAnswers[indexPath.row]
             
-            cell.answerTextLabel.text = displayedAnswer?.answer.text //setting the answer text
+            cell.answerTextLabel.text = displayedAnswer?.answer.text
             
             // if not showing results then update UI either as selected or unselected
+            // if showing results then update UI as selectedWrong, selectedCorrect or unselected
             if !showingResults {
                 cell.setCellUIForState(displayedAnswer?.isSelected ?? false)
-                
-            // if showing results then update UI as unselected, correct, wrong
             } else {
                 cell.setCellResultUIForState(displayedAnswer?.answerResult ?? .unselected)
             }
-
+            cell.accessibilityIdentifier = "quizAnswerCell"
+            cell.answerTextLabel.accessibilityIdentifier = "quizAnswerLabel"
             return cell
         }
         return UITableViewCell()

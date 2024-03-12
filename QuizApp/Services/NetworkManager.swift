@@ -17,8 +17,8 @@ class NetworkManager {
     private init() {}
     
     // func for fetching the quiz data
-    func fetchQuizData(completion: @escaping ([Quiz]?) -> ()) {
-        AF.request(url).responseDecodable(of: [Quiz].self) { response in
+    func fetchQuizData(completion: @escaping ([QuizQuestion]?) -> ()) {
+        AF.request(url).responseDecodable(of: [QuizQuestion].self) { response in
             switch response.result {
             case .success (let quizData):
                 completion(quizData)
@@ -30,7 +30,7 @@ class NetworkManager {
     }
     
     // just an example func on how the data would be saved, it isn't actually used in the app
-    func saveQuizData(_ data: [Quiz], completion: @escaping () -> ()) {
+    func saveQuizData(_ data: [QuizQuestion], completion: @escaping () -> ()) {
         AF.request(url, method: .put, parameters: data, encoder: JSONParameterEncoder.default).response { response in
             switch response.result {
             case .success:

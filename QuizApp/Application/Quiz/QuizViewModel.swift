@@ -10,8 +10,8 @@ import Foundation
 class QuizViewModel {
     
     // since all quiz questions are displayed on the same screen, we are tracking all quiz data, currently displayed quiz and the order of the current quiz
-    private let quizData: [Quiz] //or = Quiz.TEST_DATA
-    private var displayedQuiz: Quiz
+    private let quizData: [QuizQuestion] //or = Quiz.TEST_DATA
+    private var displayedQuiz: QuizQuestion
     private var currentQuestionOrder = 0
     
     // not private because viewController's tableView is using it
@@ -19,7 +19,7 @@ class QuizViewModel {
     
     private weak var viewController: QuizViewController? = nil
     
-    init?(quizData: [Quiz]?) {
+    init?(quizData: [QuizQuestion]?) {
         guard let quizData = quizData, !quizData.isEmpty else { return nil }
         
         self.quizData = quizData
@@ -34,7 +34,7 @@ class QuizViewModel {
         viewController?.loadNewQuestion(question: displayedQuiz.question, questionOrder: currentQuestionOrder + 1, totalQuestionsCount: quizData.count)
     }
     
-    private func updateDisplayedAnswers(_ displayedQuiz: Quiz) {
+    private func updateDisplayedAnswers(_ displayedQuiz: QuizQuestion) {
         displayedAnswers.removeAll() //clearing the array before each update
         
         for answer in displayedQuiz.answers {
@@ -80,7 +80,7 @@ class QuizViewModel {
         guard let viewController = viewController else { return }
         
         currentQuestionOrder += 1
-        
+    
         if currentQuestionOrder < quizData.count {
             displayedQuiz = quizData[currentQuestionOrder]
             

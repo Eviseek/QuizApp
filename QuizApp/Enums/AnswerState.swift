@@ -7,9 +7,7 @@
 
 import Foundation
 
-enum AnswerState: String {
-    
+enum AnswerState {
     case unselected
     case selected
-    
 }

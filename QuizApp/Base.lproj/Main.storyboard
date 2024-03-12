@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TN4-7o-u42" userLabel="Container View">
-                                <rect key="frame" x="0.0" y="297" width="393" height="258.33333333333326"/>
+                                <rect key="frame" x="0.0" y="279.33333333333337" width="393" height="293.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuizApp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oun-32-eGk">
                                         <rect key="frame" x="133.66666666666666" y="0.0" width="125.99999999999997" height="39"/>
@@ -61,21 +61,21 @@
                                             <constraint firstItem="zzk-gE-G6R" firstAttribute="top" secondItem="XbP-Qs-TbB" secondAttribute="bottom" constant="5" id="pUs-YV-cxx"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLj-nV-aOb">
-                                        <rect key="frame" x="0.0" y="214.33333333333331" width="393" height="44"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLj-nV-aOb" userLabel="Button Container View">
+                                        <rect key="frame" x="0.0" y="249.33333333333331" width="393" height="44"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0I8-wN-GjO" userLabel="Background Color">
                                                 <rect key="frame" x="10" y="0.0" width="373" height="44"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGS-2A-pep">
-                                                        <rect key="frame" x="10" y="10.000000000000057" width="353" height="24"/>
+                                                        <rect key="frame" x="10" y="10" width="353" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNl-ck-qA2">
                                                         <rect key="frame" x="0.0" y="0.0" width="373" height="44"/>
-                                                        <accessibility key="accessibilityConfiguration" label="startQuizButton"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="startQuizButton"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
@@ -115,7 +115,7 @@
                                     <constraint firstItem="oun-32-eGk" firstAttribute="top" secondItem="TN4-7o-u42" secondAttribute="top" id="IpE-6i-Jl0"/>
                                     <constraint firstItem="oun-32-eGk" firstAttribute="centerX" secondItem="TN4-7o-u42" secondAttribute="centerX" id="KNK-XY-unJ"/>
                                     <constraint firstAttribute="trailing" secondItem="WRF-WZ-rHT" secondAttribute="trailing" id="NRS-oN-4yE"/>
-                                    <constraint firstItem="GLj-nV-aOb" firstAttribute="top" secondItem="WRF-WZ-rHT" secondAttribute="bottom" constant="10" id="rPm-UG-jVE"/>
+                                    <constraint firstItem="GLj-nV-aOb" firstAttribute="top" secondItem="WRF-WZ-rHT" secondAttribute="bottom" constant="45" id="rPm-UG-jVE"/>
                                     <constraint firstAttribute="bottom" secondItem="GLj-nV-aOb" secondAttribute="bottom" id="rQG-zB-AgU"/>
                                 </constraints>
                             </view>
@@ -206,25 +206,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9g-N4-kde" userLabel="Question Order View">
                                 <rect key="frame" x="15" y="64" width="363" height="18"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0p9-6W-2pR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0p9-6W-2pR">
                                         <rect key="frame" x="3.0000000000000036" y="0.0" width="63.333333333333343" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="out of" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZc-0e-Pet">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="out of" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZc-0e-Pet">
                                         <rect key="frame" x="82" y="0.0" width="41.333333333333343" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-Hz-ANa">
-                                        <rect key="frame" x="126.33333333333333" y="0.0" width="9.3333333333333286" height="18"/>
+                                        <rect key="frame" x="126.33333333333336" y="0.0" width="231.66666666666663" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcV-aq-J0P">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcV-aq-J0P">
                                         <rect key="frame" x="69.333333333333329" y="0.0" width="9.6666666666666714" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -237,6 +237,7 @@
                                     <constraint firstItem="pcV-aq-J0P" firstAttribute="top" secondItem="z9g-N4-kde" secondAttribute="top" id="7s2-qR-llY"/>
                                     <constraint firstAttribute="bottom" secondItem="HZc-0e-Pet" secondAttribute="bottom" id="9tT-vb-nE8"/>
                                     <constraint firstItem="0p9-6W-2pR" firstAttribute="top" secondItem="z9g-N4-kde" secondAttribute="top" id="AZw-We-R7G"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="uaK-Hz-ANa" secondAttribute="trailing" constant="5" id="BHS-WG-XIh"/>
                                     <constraint firstItem="uaK-Hz-ANa" firstAttribute="leading" secondItem="HZc-0e-Pet" secondAttribute="trailing" constant="3" id="Glc-DY-hkN"/>
                                     <constraint firstItem="pcV-aq-J0P" firstAttribute="leading" secondItem="0p9-6W-2pR" secondAttribute="trailing" constant="3" id="Nfo-ZC-wFx"/>
                                     <constraint firstItem="HZc-0e-Pet" firstAttribute="leading" secondItem="pcV-aq-J0P" secondAttribute="trailing" constant="3" id="Sex-A5-sLd"/>
@@ -258,7 +259,7 @@
                                 <color key="backgroundColor" name="backgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GO1-7F-Wn4" userLabel="Explanation View">
-                                <rect key="frame" x="15" y="585.33333333333337" width="363" height="176.66666666666663"/>
+                                <rect key="frame" x="15" y="612" width="363" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3J-Jx-upS" userLabel="Correct Answer View">
                                         <rect key="frame" x="101.00000000000001" y="10" width="161.33333333333337" height="32"/>
@@ -289,15 +290,15 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac1-gJ-kzc">
-                                        <rect key="frame" x="10" y="47.000000000000007" width="343" height="114.66666666666669"/>
-                                        <string key="text">This shade should provide a visually appealing contrast with the dark blue button while indicating its disabled state. This shade should provide a visually appealing contrast with the dark blue button while indicating its disabled state.</string>
+                                        <rect key="frame" x="10" y="47" width="343" height="88"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla volutpat nulla, et iaculis sem pretium nec. Nullam aliquam est sed rhoncus placerat. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" name="correctAnswerLightGreen"/>
-                                <accessibility key="accessibilityConfiguration" label="explanationView"/>
+                                <accessibility key="accessibilityConfiguration" identifier="explanationView"/>
                                 <constraints>
                                     <constraint firstItem="Ac1-gJ-kzc" firstAttribute="leading" secondItem="GO1-7F-Wn4" secondAttribute="leading" constant="10" id="FnJ-jO-07I"/>
                                     <constraint firstItem="Ac1-gJ-kzc" firstAttribute="top" secondItem="Y3J-Jx-upS" secondAttribute="bottom" constant="5" id="H7Q-ZZ-DA5"/>
@@ -329,7 +330,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZy-PM-CJE">
                                         <rect key="frame" x="0.0" y="0.0" width="363" height="50"/>
-                                        <accessibility key="accessibilityConfiguration" label="submitAnswersButton"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="submitAnswersButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="wsb-aQ-QCG"/>
                                         </constraints>
@@ -381,8 +382,6 @@
                         <outlet property="currentQuestionOrderLabel" destination="pcV-aq-J0P" id="hlF-ih-QHt"/>
                         <outlet property="explanationLabel" destination="Ac1-gJ-kzc" id="gEL-IC-ckx"/>
                         <outlet property="explanationView" destination="GO1-7F-Wn4" id="snA-x2-AgJ"/>
-                        <outlet property="finalResultImageView" destination="x3R-GM-itn" id="A3q-kQ-hdQ"/>
-                        <outlet property="finalResultLabel" destination="XZi-ok-WIb" id="1fY-9i-xdL"/>
                         <outlet property="questionLabel" destination="3RS-Ch-5k3" id="2V7-NM-pMa"/>
                         <outlet property="submitAnswerButton" destination="QZy-PM-CJE" id="22d-jp-moT"/>
                         <outlet property="submitAnswerContainerView" destination="fFE-EN-JoP" id="n1F-gK-6ke"/>

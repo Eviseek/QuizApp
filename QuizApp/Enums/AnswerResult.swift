@@ -7,10 +7,8 @@
 
 import Foundation
 
-enum ResultState: String {
-    
+enum AnswerResult {
     case unselected
     case selectedCorrect
     case selectedWrong
-    
 }

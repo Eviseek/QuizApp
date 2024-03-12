@@ -34,13 +34,14 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fI8-1K-xKH">
                                         <rect key="frame" x="40" y="15.000000000000002" width="429" height="21.666666666666671"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="quizAnswerLabel"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" name="backgroundColor"/>
-                                <accessibility key="accessibilityConfiguration" label="quizAnswerLabel"/>
+                                <accessibility key="accessibilityConfiguration" identifier="quizAnswerContainer"/>
                                 <constraints>
                                     <constraint firstItem="fI8-1K-xKH" firstAttribute="centerY" secondItem="gPJ-C6-UfC" secondAttribute="centerY" id="HSL-vW-pui"/>
                                     <constraint firstAttribute="bottom" secondItem="fI8-1K-xKH" secondAttribute="bottom" constant="15" id="VMw-E3-bos"/>
@@ -52,7 +53,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="lightGray"/>
-                        <accessibility key="accessibilityConfiguration" label="quizAnswerCell"/>
+                        <accessibility key="accessibilityConfiguration" identifier="quizAnswerCell"/>
                         <constraints>
                             <constraint firstItem="Efh-XO-dbs" firstAttribute="top" secondItem="y5c-Xs-ij4" secondAttribute="top" constant="2" id="F4F-a4-fyY"/>
                             <constraint firstAttribute="trailing" secondItem="Efh-XO-dbs" secondAttribute="trailing" constant="2" id="aLm-BK-0yK"/>
